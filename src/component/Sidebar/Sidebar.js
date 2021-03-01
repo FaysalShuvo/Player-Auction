@@ -1,6 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 
+
 const Sidebar = ({ cart }) => {
   const total = cart.reduce((sum, player) => sum + player.salary, 0);
   return (

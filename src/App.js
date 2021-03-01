@@ -8,6 +8,8 @@ import Sidebar from "./component/Sidebar/Sidebar";
 const App = () => {
   const [players, setPlayers] = useState([]);
   const [cart, setCart] = useState([]);
+
+  
   const addToCartHandler = (player) => {
     const newCart = [...cart, player];
     setCart(newCart);
