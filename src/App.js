@@ -1,11 +1,39 @@
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import Header from "./component/Header/Header";
+import Players from "./component/Players/Players";
+import Sidebar from "./component/Sidebar/Sidebar";
 
-import './App.css';
-import Checking from './component/Checking/Checking';
+const App = () => {
+  const [players, setPlayers] = useState([]);
+  const [cart, setCart] = useState([]);
+  const addToCartHandler = (player) => {
+    const newCart = [...cart, player];
+    setCart(newCart);
+  };
 
-function App() {
+  useEffect(() => {
+    fetch("https://api.mocki.io/v1/846410e6")
+      .then((res) => res.json())
+      .then((data) => setPlayers(data))
+      .catch((error) => console.log(error));
+  }, []);
+
   return (
-   <Checking></Checking>
+    <div>
+      <Header></Header>
+      <main className="container my-5">
+        <div className="row">
+          <Players
+            players={players}
+            addToCartHandler={addToCartHandler}
+          ></Players>
+          <Sidebar cart={cart}></Sidebar>
+        </div>
+      </main>
+    </div>
   );
-}
+};
 
 export default App;
