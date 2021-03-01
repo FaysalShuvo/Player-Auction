@@ -1,5 +1,5 @@
 import React from "react";
-import "../../asset/bootstrap.min.css";
+
 const Header = () => {
   return (
     <div>

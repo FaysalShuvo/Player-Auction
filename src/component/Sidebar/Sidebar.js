@@ -1,4 +1,5 @@
 import React from "react";
+import "./Sidebar.css";
 
 const Sidebar = ({ cart }) => {
   const total = cart.reduce((sum, player) => sum + player.salary, 0);
@@ -13,7 +14,9 @@ const Sidebar = ({ cart }) => {
         ))}
       </ul>
       <div className="d-grid">
-        <button className="btn btn-outline-info">Total Cost - {total}$</button>
+        <button className="btn btn-outline-primary text-style">
+          Total Cost - {total}$
+        </button>
       </div>
     </aside>
   );
