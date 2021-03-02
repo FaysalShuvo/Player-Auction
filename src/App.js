@@ -25,7 +25,7 @@ const App = () => {
   return (
     <div>
       <Header></Header>
-      <main className="container my-5">
+      <main >
         <div className="row">
           <Players
             players={players}

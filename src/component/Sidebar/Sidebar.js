@@ -3,6 +3,7 @@ import "./Sidebar.css";
 
 
 const Sidebar = ({ cart }) => {
+ 
   const total = cart.reduce((sum, player) => sum + player.salary, 0);
   return (
     <aside className="sidebar col-md-4 ps-5">

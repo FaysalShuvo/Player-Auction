@@ -8,13 +8,13 @@ const Player = (props) => {
   const [isClicked, setIsClicked] = useState(false);
   return (
     <div>
-      <div className="single-product col text-center">
+      
         <div className="card border-0">
-          <img className="img-thumbnail w-75" src={image} alt="..." />
-          <div className="card-body">
-            <h3 className="card-title">{name}</h3>
-            <h5 className="card-text">JERSEY: {jersey}</h5>
-            <h6 className="card-text">Transfer Value: ${salary}</h6>
+          <img src={image} alt="..." />
+          <div >
+            <h3 >{name}</h3>
+            <h5 >JERSEY: {jersey}</h5>
+            <h6 >Transfer Value: ${salary}</h6>
             <button
               disabled={isClicked}
               onClick={() => {
@@ -29,7 +29,7 @@ const Player = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
